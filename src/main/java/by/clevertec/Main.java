@@ -282,12 +282,18 @@ public class Main {
                 .filter(car -> car.getVin().contains("59"))
                 .toList();
 
-        double turkmenistanCost = turkmenistanCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
-        double uzbekistanCost = uzbekistanCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
-        double kazakhstanCost = kazakhstanCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
-        double kyrgyzstanCost = kyrgyzstanCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
-        double russiaCost = russianCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
-        double mongoliaCost = mongolianCars.stream().mapToDouble(car -> car.getMass() / 1000 * 7.14).sum();
+        double turkmenistanCost = turkmenistanCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
+        double uzbekistanCost = uzbekistanCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
+        double kazakhstanCost = kazakhstanCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
+        double kyrgyzstanCost = kyrgyzstanCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
+        double russiaCost = russianCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
+        double mongoliaCost = mongolianCars.stream().mapToDouble(car ->
+                (double) car.getMass() / 1000 * 7.14).sum();
 
         System.out.println("Turkmenistan: " + turkmenistanCost + " $");
         System.out.println("Uzbekistan: " + uzbekistanCost + " $");
